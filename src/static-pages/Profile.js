@@ -13,7 +13,7 @@ export default class Profile extends React.Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar page='profile'/>
         <div>
           <Grid container direction="column" alignItems="center">
             <img

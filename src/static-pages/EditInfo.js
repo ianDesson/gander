@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -22,6 +22,12 @@ import AddCircle from "@material-ui/icons/AddCircle";
 import Save from "@material-ui/icons/Save";
 
 export default class EditInfo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { clickedButton: "" };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   NavBar = () => {
     const NavBarTheme = createMuiTheme({
       palette: {
@@ -102,7 +108,15 @@ export default class EditInfo extends React.Component {
     </Grid>
   );
 
+  handleChange(id) {
+    this.setState({ clickedButton: id });
+  }
+
   render() {
+    const highlightStyle = {
+      backgroundColor: "#56D822"
+    };
+
     return (
       <div style={{ backgroundColor: "#FCFFFC" }}>
         <this.NavBar />
@@ -110,28 +124,42 @@ export default class EditInfo extends React.Component {
           <form>
             <Grid container direction="column">
               <this.CardGrid />
-              <TextField multiline label="Bio" rowsMax="4" style={{margin: '2rem 0 2rem'}}/>
+              <TextField
+                multiline
+                label="Bio"
+                rowsMax="4"
+                style={{ margin: "2rem 0 2rem" }}
+              />
               <TextField label="City" />
-              <Grid item style={{margin: '2rem 0 2rem'}}>
+              <Grid item style={{ margin: "2rem 0 2rem" }}>
                 <Typography variant="h6">Gender</Typography>
                 <Grid container direction="row" justify="space-evenly">
-                  <IconButton>
+                  <IconButton
+                    style={this.state.clickedButton === 0 ? highlightStyle : {}}
+                    onClick={() => this.handleChange(0)}
+                  >
                     <img
                       src={require("../images/male.png")}
                       alt="male"
                       style={{ height: "3rem" }}
                     />
                   </IconButton>
-                  <IconButton>
+                  <IconButton
+                    style={this.state.clickedButton === 2 ? highlightStyle : {}}
+                    onClick={() => this.handleChange(2)}
+                  >
                     <img
                       src={require("../images/female.png")}
                       alt="female"
                       style={{ height: "3rem" }}
                     />
                   </IconButton>
-                  <IconButton>
+                  <IconButton
+                    style={this.state.clickedButton === 3 ? highlightStyle : {}}
+                    onClick={() => this.handleChange(3)}
+                  >
                     <img
-                      src={require("../images/other.jpg")}
+                      src={require("../images/other.png")}
                       alt="female"
                       style={{ height: "3rem" }}
                     />

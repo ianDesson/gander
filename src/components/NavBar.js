@@ -20,32 +20,40 @@ const theme = createMuiTheme({
   }
 });
 
-const NavBar = () => (
-  <ThemeProvider theme={theme}>
-    <AppBar position="static">
-      <ToolBar>
-        <Grid
-          container
-          direction="row"
-          justify="space-evenly"
-          alignItems="center"
-        >
-          <Link to="/profile">
-            <IconButton>
-              <AccountCircle />
+const NavBar = props => {
+  return (
+    <ThemeProvider theme={theme}>
+      <AppBar position="static">
+        <ToolBar>
+          <Grid
+            container
+            direction="row"
+            justify="space-evenly"
+            alignItems="center"
+          >
+            <Link to="/profile">
+              <IconButton
+                style={props.page === "profile" ? { color: "#FCFFFC" } : {}}
+              >
+                <AccountCircle />
+              </IconButton>
+            </Link>
+            <Link to="/gangview">
+              <IconButton
+                style={props.page === "gangview" ? { color: "#FCFFFC" } : {}}
+              >
+                <img src={logo} alt="Home" width="24" height="24" />
+              </IconButton>
+            </Link>
+            <IconButton
+              style={props.page === "messages" ? { color: "#FCFFFC" } : {}}
+            >
+              <ForumRounded />
             </IconButton>
-          </Link>
-          <Link to="/gangview">
-            <IconButton>
-              <img src={logo} alt="Home" width="24" height="24" />
-            </IconButton>
-          </Link>
-          <IconButton>
-            <ForumRounded />
-          </IconButton>
-        </Grid>
-      </ToolBar>
-    </AppBar>
-  </ThemeProvider>
-);
+          </Grid>
+        </ToolBar>
+      </AppBar>
+    </ThemeProvider>
+  );
+};
 export default NavBar;
