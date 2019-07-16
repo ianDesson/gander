@@ -32,8 +32,7 @@ const Routes = () => (
         // The path prop to denotes the url path
         // The component prop denotes the component to render at the path
       }
-      <Route exact path="/" component={App} />
-      <Route path="/SignIn" component={SignIn} />
+      <Route exact path="/" component={SignIn} />
       <Route path="/Login" component={Login} />
       <Route path="/SignUp" component={SignUp} />
       <Route path="/GangView" component={GangView} />
