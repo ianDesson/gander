@@ -56,7 +56,7 @@ export default function SignUp() {
           Sign Up
         </Typography>
         <ThemeProvider theme={theme}>
-        <form className={classes.form} noValidate>
+        <form className={classes.form}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -101,6 +101,18 @@ export default function SignUp() {
                 label="Password"
                 type="password"
                 id="password"
+                autoComplete="current-password"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="confirm password"
+                label="Confirm Password"
+                type="password"
+                id="confirmPassword"
                 autoComplete="current-password"
               />
             </Grid>

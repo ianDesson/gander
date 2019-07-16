@@ -23,36 +23,33 @@ const theme = createMuiTheme ({
       }
     }
 });
-
-
-const useStyles = makeStyles(theme => ({
-  paper: {
+const paper = {
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  },
-  form: {
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
+}
 
-export default function SignIn() {
-  const classes = useStyles();
+const form = {
+  marginTop: theme.spacing(1),
+}
 
+const submit = {
+  margin: theme.spacing(3, 0, 2),
+}
+
+export default class Login extends React.Component {
+render(){
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <div className={classes.paper}>
+      <div style={paper}>
 
         <Typography component="h1" variant="h5">
           Sign In
         </Typography>
         <ThemeProvider theme={theme}>
-        <form className={classes.form} noValidate>
+        <form style={form}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -84,7 +81,7 @@ export default function SignIn() {
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            style={submit}
           >
             Sign In
           </Button>
@@ -107,4 +104,5 @@ export default function SignIn() {
       </Box>
     </Container>
   );
+};
 }
