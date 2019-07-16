@@ -68,12 +68,13 @@ export default class GangView extends React.Component {
                 title={this.gangs[this.state.currentIndex].name}
                 subheader="Ottawa, ON"
               />
-              {
-                //Images aren't working rn??
-                //<CardMedia
-                //image={require("../images/gangLogos/"+this.gangs[currentIndex].imageFileName)}
-                //title={this.gangs[currentIndex].name}/>
-              }
+
+              <CardMedia
+                style={{height: "100%"}}
+                image={"/gaming.png"}
+                title={this.gangs[this.state.currentIndex].name}
+              />
+
               <CardContent>
                 <Typography variant="body2" component="p">
                   {this.gangs[this.state.currentIndex].description}
@@ -88,12 +89,12 @@ export default class GangView extends React.Component {
               justify="space-evenly"
               alignItems="flex-end"
             >
-              <IconButton color="secondary" size="medium">
-                <Cancel
-                  fontSize="large"
-                  color="inherit"
-                  onClick={this.incrementCurrentIndex}
-                />
+              <IconButton
+                color="secondary"
+                size="medium"
+                onClick={this.incrementCurrentIndex}
+              >
+                <Cancel fontSize="large" color="inherit" />
               </IconButton>
               <IconButton
                 color="primary"

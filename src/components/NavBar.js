@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
+import { Link } from "react-router-dom";
 
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import logo from "../images/logo.png";
@@ -32,9 +33,11 @@ const NavBar = () => (
           <IconButton>
             <AccountCircle />
           </IconButton>
-          <IconButton>
-            <img src={logo} alt="Home" width="24" height="24" />
-          </IconButton>
+          <Link to="/gangview">
+            <IconButton>
+              <img src={logo} alt="Home" width="24" height="24" />
+            </IconButton>
+          </Link>
           <IconButton>
             <ForumRounded />
           </IconButton>
