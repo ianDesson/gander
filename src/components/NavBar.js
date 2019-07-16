@@ -30,9 +30,11 @@ const NavBar = () => (
           justify="space-evenly"
           alignItems="center"
         >
-          <IconButton>
-            <AccountCircle />
-          </IconButton>
+          <Link to="/profile">
+            <IconButton>
+              <AccountCircle />
+            </IconButton>
+          </Link>
           <Link to="/gangview">
             <IconButton>
               <img src={logo} alt="Home" width="24" height="24" />
