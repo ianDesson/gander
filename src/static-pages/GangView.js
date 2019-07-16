@@ -70,7 +70,7 @@ export default class GangView extends React.Component {
               />
 
               <CardMedia
-                style={{height: "100%"}}
+                style={{height: "20rem", backgroundSize: "contain"}}
                 image={"/gaming.png"}
                 title={this.gangs[this.state.currentIndex].name}
               />
