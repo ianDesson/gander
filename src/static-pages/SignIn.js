@@ -32,7 +32,7 @@ export default class SignIn extends React.Component {
   render() {
     return(
       <>
-        <img src={logoWithText} style= {logoStyle}/>
+        <img src={logoWithText} style= {logoStyle} alt="Gander"/>
         <ThemeProvider theme={theme}>
         <Button variant="contained" color="secondary" fullWidth='true' size='large'>
           SIGN UP WITH EMAIL
