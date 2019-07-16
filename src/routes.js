@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import App from "./App";
 import GangView from './static-pages/GangView';
 import Profile from "./static-pages/Profile";
 import EditInfo from "./static-pages/EditInfo";
