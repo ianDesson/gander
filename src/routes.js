@@ -5,6 +5,9 @@ import App from "./App";
 import GangView from './static-pages/GangView';
 import Profile from "./static-pages/Profile";
 import EditInfo from "./static-pages/EditInfo";
+import SignIn from './static-pages/SignIn';
+import Login from './static-pages/Login';
+import SignUp from './static-pages/SignUp'
 
 /*
  * Forces the page to scroll to the top when loaded
@@ -30,6 +33,9 @@ const Routes = () => (
         // The component prop denotes the component to render at the path
       }
       <Route exact path="/" component={App} />
+      <Route path="/SignIn" component={SignIn} />
+      <Route path="/Login" component={Login} />
+      <Route path="/SignUp" component={SignUp} />
       <Route path="/GangView" component={GangView} />
       <Route path="/Profile" component={Profile} />
       <Route path="/EditInfo" component={EditInfo} />
