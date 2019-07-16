@@ -3,6 +3,9 @@ import { Switch, Route } from "react-router-dom";
 
 import App from "./App";
 import GangView from './static-pages/GangView';
+import SignIn from './static-pages/SignIn';
+import Login from './static-pages/Login';
+import SignUp from './static-pages/SignUp'
 
 /*
  * Forces the page to scroll to the top when loaded
@@ -29,6 +32,9 @@ const Routes = () => (
       }
       <Route exact path="/" component={App} />
       <Route path="/GangView" component={GangView} />
+      <Route path="/SignIn" component={SignIn} />
+      <Route path="/Login" component={Login} />
+      <Route path="/SignUp" component={SignUp} />
     </ScrollToTop>
   </Switch>
 );
