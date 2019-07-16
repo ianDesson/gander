@@ -1,6 +1,5 @@
 import React from "react";
 import logoWithText from "../images/logoWithText.png";
-import facebook from "../images/facebook.png";
 import Button from '@material-ui/core/Button';
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
@@ -39,8 +38,7 @@ export default class SignIn extends React.Component {
           SIGN UP WITH EMAIL
         </Button>
 
-        <Button style={buttons} variant="contained" color="secondary" fullWidth='true' size='large' icon={facebook}>
-          <img src={facebook}  width='10%' height='auto'/>
+        <Button style={buttons} variant="contained" color="secondary" fullWidth='true' size='large'>
           SIGN UP WITH FACEBOOK
         </Button>
 
