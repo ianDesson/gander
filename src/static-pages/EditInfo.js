@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -34,9 +34,11 @@ export default class EditInfo extends React.Component {
       <ThemeProvider theme={NavBarTheme}>
         <AppBar position="static">
           <Toolbar style={{ paddingLeft: "0" }}>
-            <IconButton size="medium">
-              <ArrowBack fontSize="large" />
-            </IconButton>
+            <Link to="/profile">
+              <IconButton size="medium">
+                <ArrowBack fontSize="large" />
+              </IconButton>
+            </Link>
             <Typography variant="h4" style={{ margin: "0 auto" }}>
               Edit Info
             </Typography>
@@ -108,9 +110,9 @@ export default class EditInfo extends React.Component {
           <form>
             <Grid container direction="column">
               <this.CardGrid />
-              <TextField multiline label="Bio" rowsMax="4" />
+              <TextField multiline label="Bio" rowsMax="4" style={{margin: '2rem 0 2rem'}}/>
               <TextField label="City" />
-              <Grid item>
+              <Grid item style={{margin: '2rem 0 2rem'}}>
                 <Typography variant="h6">Gender</Typography>
                 <Grid container direction="row" justify="space-evenly">
                   <IconButton>
@@ -123,6 +125,13 @@ export default class EditInfo extends React.Component {
                   <IconButton>
                     <img
                       src={require("../images/female.png")}
+                      alt="female"
+                      style={{ height: "3rem" }}
+                    />
+                  </IconButton>
+                  <IconButton>
+                    <img
+                      src={require("../images/other.jpg")}
                       alt="female"
                       style={{ height: "3rem" }}
                     />
