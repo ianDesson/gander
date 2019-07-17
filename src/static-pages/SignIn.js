@@ -1,54 +1,79 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoWithText from "../images/logoWithText.png";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 
-const theme = createMuiTheme ({
-    palette: {
-      primary: {
-        main: "#000F08"
-      },
-      secondary: {
-        main: '#1C3738'
-      }
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#000F08"
+    },
+    secondary: {
+      main: "#1C3738"
     }
+  }
 });
 
 const logoStyle = {
-  width:'75%',
-  height:'auto',
-  display: 'block',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  marginTop: '50px'
+  width: "75%",
+  height: "auto",
+  display: "block",
+  marginLeft: "auto",
+  marginRight: "auto",
+  marginTop: "50px"
 };
 
 const buttons = {
-  marginTop: '10px'
-}
+  marginTop: "10px"
+};
 export default class SignIn extends React.Component {
-
   render() {
-    return(
+    return (
       <>
-        <img src={logoWithText} style= {logoStyle} alt="Gander"/>
+        <img src={logoWithText} style={logoStyle} alt="Gander" />
         <ThemeProvider theme={theme}>
-        <Button variant="contained" color="secondary" fullWidth='true' size='large'>
-          SIGN UP WITH EMAIL
-        </Button>
+          <Link to="/signup" style={{textDecoration: 'none'}}>
+            <Button
+              variant="contained"
+              color="secondary"
+              fullWidth="true"
+              size="large"
+            >
+              SIGN UP WITH EMAIL
+            </Button>
+          </Link>
+          <Button
+            style={buttons}
+            variant="contained"
+            color="secondary"
+            fullWidth="true"
+            size="large"
+          >
+            SIGN UP WITH FACEBOOK
+          </Button>
 
-        <Button style={buttons} variant="contained" color="secondary" fullWidth='true' size='large'>
-          SIGN UP WITH FACEBOOK
-        </Button>
-
-        <Button style={buttons} variant="contained" color="secondary" fullWidth='true' size='large'>
-          SIGN UP WITH GOOGLE
-        </Button>
-
-        <Button style={buttons} variant="contained" color="primary" fullWidth='true' size='large'>
-          LOG IN
-        </Button>
+          <Button
+            style={buttons}
+            variant="contained"
+            color="secondary"
+            fullWidth="true"
+            size="large"
+          >
+            SIGN UP WITH GOOGLE
+          </Button>
+          <Link to="/login" style={{textDecoration: 'none'}}>
+            <Button
+              style={buttons}
+              variant="contained"
+              color="primary"
+              fullWidth="true"
+              size="large"
+            >
+              LOG IN
+            </Button>
+          </Link>
         </ThemeProvider>
       </>
     );
