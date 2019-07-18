@@ -10,6 +10,7 @@ import SignUp from './static-pages/SignUp'
 import Messages from "./static-pages/Messages";
 import CreateGroup from './static-pages/CreateGroup';
 import AddPictures from "./static-pages/AddPictures";
+import Settings from './static-pages/Settings';
 
 /*
  * Forces the page to scroll to the top when loaded
@@ -43,6 +44,7 @@ const Routes = () => (
       <Route path="/Messages" component={Messages} />
       <Route path="/CreateGroup" component={CreateGroup} />
       <Route path="/AddPictures" component={AddPictures} />
+      <Route path="/settings" component={Settings} />
     </ScrollToTop>
   </Switch>
 );
