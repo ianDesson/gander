@@ -18,7 +18,7 @@ export default class Profile extends React.Component {
           <Grid container direction="column" alignItems="center">
             <img
               src={require("../images/person-icon.jpg")}
-              alt="Profile Picture"
+              alt="Profile"
               style={{ margin:'2rem', height: "150px", width: "150px", borderRadius: "75px" }}
             />
             <Typography variant="h3">Xavier, 40</Typography>

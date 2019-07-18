@@ -7,6 +7,7 @@ import EditInfo from "./static-pages/EditInfo";
 import SignIn from './static-pages/SignIn';
 import Login from './static-pages/Login';
 import SignUp from './static-pages/SignUp'
+import Messages from "./static-pages/Messages";
 
 /*
  * Forces the page to scroll to the top when loaded
@@ -37,6 +38,7 @@ const Routes = () => (
       <Route path="/GangView" component={GangView} />
       <Route path="/Profile" component={Profile} />
       <Route path="/EditInfo" component={EditInfo} />
+      <Route path="/Messages" component={Messages} />
     </ScrollToTop>
   </Switch>
 );

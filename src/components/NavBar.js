@@ -40,7 +40,7 @@ const NavBar = props => {
             </Link>
             <Link to="/gangview">
               <IconButton
-                style={props.page === "gangview" ? { color: "#FCFFFC" } : {}}
+                style={props.page === "gangview" ? { backgroundColor: "#FCFFFC" } : {}}
               >
                 <img src={logo} alt="Home" width="24" height="24" />
               </IconButton>
