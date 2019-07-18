@@ -1,12 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
-  AppBar,
-  Toolbar,
   Grid,
   IconButton,
   Typography,
-  createMuiTheme,
   TextField,
   Card,
   Fab
@@ -14,12 +10,12 @@ import {
 
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActions from "@material-ui/core/CardActions";
-import { ThemeProvider } from "@material-ui/styles";
 
-import ArrowBack from "@material-ui/icons/ArrowBack";
 import Cancel from "@material-ui/icons/Cancel";
 import AddCircle from "@material-ui/icons/AddCircle";
 import Save from "@material-ui/icons/Save";
+
+import EditingNavBar from "../components/EditingNavBar";
 
 export default class EditInfo extends React.Component {
   constructor(props) {
@@ -27,32 +23,6 @@ export default class EditInfo extends React.Component {
     this.state = { clickedButton: "" };
     this.handleChange = this.handleChange.bind(this);
   }
-
-  NavBar = () => {
-    const NavBarTheme = createMuiTheme({
-      palette: {
-        primary: {
-          main: "#56D822"
-        }
-      }
-    });
-    return (
-      <ThemeProvider theme={NavBarTheme}>
-        <AppBar position="static">
-          <Toolbar style={{ paddingLeft: "0" }}>
-            <Link to="/profile">
-              <IconButton size="medium">
-                <ArrowBack fontSize="large" />
-              </IconButton>
-            </Link>
-            <Typography variant="h4" style={{ margin: "0 auto" }}>
-              Edit Info
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </ThemeProvider>
-    );
-  };
 
   CardGrid = () => (
     <Grid
@@ -119,7 +89,7 @@ export default class EditInfo extends React.Component {
 
     return (
       <div style={{ backgroundColor: "#FCFFFC" }}>
-        <this.NavBar />
+        <EditingNavBar title="Edit Info" backNavigation="/profile" />
         <div style={{ margin: "0 auto", width: "75%" }}>
           <form>
             <Grid container direction="column">
