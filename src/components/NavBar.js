@@ -40,16 +40,22 @@ const NavBar = props => {
             </Link>
             <Link to="/gangview">
               <IconButton
-                style={props.page === "gangview" ? { backgroundColor: "#FCFFFC" } : {}}
+                style={
+                  props.page === "gangview"
+                    ? { backgroundColor: "#FCFFFC" }
+                    : {}
+                }
               >
                 <img src={logo} alt="Home" width="24" height="24" />
               </IconButton>
             </Link>
-            <IconButton
-              style={props.page === "messages" ? { color: "#FCFFFC" } : {}}
-            >
-              <ForumRounded />
-            </IconButton>
+            <Link to="/messages">
+              <IconButton
+                style={props.page === "messages" ? { color: "#FCFFFC" } : {}}
+              >
+                <ForumRounded />
+              </IconButton>
+            </Link>
           </Grid>
         </ToolBar>
       </AppBar>
