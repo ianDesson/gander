@@ -35,14 +35,14 @@ export default class GangView extends React.Component {
       imageFileName: "gaming.png"
     },
     {
-      name: "Entrepeneurial Gang",
+      name: "Entrepeneurship Gang",
       description: "A gang of entrepeneurs who discuss anything business!",
-      imageFileName: "gaming.png"
+      imageFileName: "entrepeneurship.png"
     },
     {
       name: "Engineering Gang",
       description: "A gang of Engineers drinking coffee to meet deadlines.",
-      imageFileName: "gaming.png"
+      imageFileName: "engineering.png"
     }
   ];
 
@@ -71,7 +71,7 @@ export default class GangView extends React.Component {
 
               <CardMedia
                 style={{height: "20rem", backgroundSize: "contain"}}
-                image={"/gaming.png"}
+                image={this.gangs[this.state.currentIndex].imageFileName}
                 title={this.gangs[this.state.currentIndex].name}
               />
 

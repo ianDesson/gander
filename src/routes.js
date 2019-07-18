@@ -8,6 +8,7 @@ import SignIn from './static-pages/SignIn';
 import Login from './static-pages/Login';
 import SignUp from './static-pages/SignUp'
 import Messages from "./static-pages/Messages";
+import CreateGroup from './static-pages/CreateGroup';
 
 /*
  * Forces the page to scroll to the top when loaded
@@ -39,6 +40,7 @@ const Routes = () => (
       <Route path="/Profile" component={Profile} />
       <Route path="/EditInfo" component={EditInfo} />
       <Route path="/Messages" component={Messages} />
+      <Route path="/CreateGroup" component={CreateGroup} />
     </ScrollToTop>
   </Switch>
 );

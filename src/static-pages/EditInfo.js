@@ -96,11 +96,12 @@ export default class EditInfo extends React.Component {
               <this.CardGrid />
               <TextField
                 multiline
+                variant="outlined"
                 label="Bio"
                 rowsMax="4"
                 style={{ margin: "2rem 0 2rem" }}
               />
-              <TextField label="City" />
+              <TextField label="City" variant="outlined" />
               <Grid item style={{ margin: "2rem 0 2rem" }}>
                 <Typography variant="h6">Gender</Typography>
                 <Grid container direction="row" justify="space-evenly">
