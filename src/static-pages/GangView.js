@@ -73,7 +73,7 @@ export default class GangView extends React.Component {
     return (
       <>
         <NavBar page='gangview'/>
-        <div style={{ margin: "0 auto", width: "75%" }}>
+        <div style={{ margin: "1rem auto", width: "75%" }}>
           <div>
             <Card>
               <CardHeader
