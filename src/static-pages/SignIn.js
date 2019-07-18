@@ -50,6 +50,7 @@ export default class SignIn extends React.Component {
               SIGN UP WITH EMAIL
             </Button>
           </Link>
+          <Link to="/Profile" style={{textDecoration: 'none'}}>
           <Button
             style={{marginTop: '1rem', backgroundColor: '#3C5A99'}}
             variant="contained"
@@ -59,7 +60,8 @@ export default class SignIn extends React.Component {
           >
             SIGN UP WITH FACEBOOK
           </Button>
-
+          </Link>
+          <Link to="/Profile" style={{textDecoration: 'none'}}>
           <Button
             style={{marginTop: '1rem', backgroundColor: '#B23121'}}
             variant="contained"
@@ -69,6 +71,8 @@ export default class SignIn extends React.Component {
           >
             SIGN UP WITH GOOGLE
           </Button>
+          </Link>
+
           <Link to="/login" style={{textDecoration: 'none'}}>
             <Button
               style={{marginTop: '1rem'}}
