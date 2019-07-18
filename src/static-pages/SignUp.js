@@ -11,6 +11,10 @@ import Container from '@material-ui/core/Container';
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 
+
+/*
+ * Provides the colour scheme used
+ */
 const theme = createMuiTheme ({
     palette: {
       primary: {
@@ -22,7 +26,9 @@ const theme = createMuiTheme ({
     }
 });
 
-
+/*
+ * Provides the Material-UI styling for the page
+ */
 const useStyles = makeStyles(theme => ({
 
   paper: {
@@ -43,6 +49,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
+/*
+ * Component for the SignUp page
+ */
 export default function SignUp() {
   const classes = useStyles();
 

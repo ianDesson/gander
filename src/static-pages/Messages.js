@@ -15,7 +15,9 @@ import {
 } from "@material-ui/core";
 import { deepOrange } from '@material-ui/core/colors';
 
-
+/*
+ * Component for the messages page
+ */
 export default class Messages extends React.Component {
   render() {
     return (

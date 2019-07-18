@@ -16,6 +16,9 @@ import Save from '@material-ui/icons/Save';
 
 import EditingNavBar from "../components/EditingNavBar";
 
+/*
+ * Create Group Form
+ */
 export default class CreateGroup extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +30,9 @@ export default class CreateGroup extends React.Component {
     };
   }
 
+  /*
+   * Name Change Handler, changes the name in the component's state
+   */
   handleNameChange = event => {
     this.setState({
       gangName: event.target.value,
@@ -36,6 +42,9 @@ export default class CreateGroup extends React.Component {
     });
   };
 
+  /*
+   * Location Change Handler, changes the location in the component's state
+   */
   handleLocationChange = event => {
     this.setState({
       gangName: this.state.gangName,
@@ -45,6 +54,10 @@ export default class CreateGroup extends React.Component {
     });
   };
 
+
+  /*
+   * Color Change Handler, changes the color in the component's state
+   */
   handleColorChange = color => {
     this.setState({
       gangName: this.state.gangName,
@@ -53,7 +66,10 @@ export default class CreateGroup extends React.Component {
       bio: this.bio
     });
   };
-
+  
+  /*
+   * Bio Change Handler, changes the bio in the component's state
+   */
   handleBioChange = event => {
     this.setState({
       gangName: this.state.gangName,
@@ -140,7 +156,7 @@ export default class CreateGroup extends React.Component {
           <Fab
             variant="extended"
             style={{ color: "#FCFFFC", backgroundColor: "#56D822" }}
-            
+
           >
             <Save />
             Save

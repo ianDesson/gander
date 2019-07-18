@@ -20,6 +20,9 @@ const theme = createMuiTheme({
   }
 });
 
+/*
+ * Main NavBar used to Navigate between Profile View, GangView, and Messages
+ */
 const NavBar = props => {
   return (
     <ThemeProvider theme={theme}>

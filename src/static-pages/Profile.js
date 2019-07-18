@@ -9,6 +9,9 @@ import Settings from "@material-ui/icons/Settings";
 import PhotoLibrary from "@material-ui/icons/PhotoLibrary";
 import Edit from "@material-ui/icons/Edit";
 
+/*
+ * Component for the Profile page
+ */
 export default class Profile extends React.Component {
   render() {
     return (

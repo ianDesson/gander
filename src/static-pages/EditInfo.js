@@ -17,6 +17,10 @@ import Save from "@material-ui/icons/Save";
 
 import EditingNavBar from "../components/EditingNavBar";
 
+/*
+ * Component for the Edit Info Page
+ * Meant to edit a profile's bio, images, etc.
+ */
 export default class EditInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +28,9 @@ export default class EditInfo extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  /*
+   * Component for adding/removing images on a profile
+   */
   CardGrid = () => (
     <Grid
       container
@@ -78,6 +85,9 @@ export default class EditInfo extends React.Component {
     </Grid>
   );
 
+  /*
+   * Handles the change between genders
+   */
   handleChange(id) {
     this.setState({ clickedButton: id });
   }

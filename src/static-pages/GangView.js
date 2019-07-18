@@ -16,6 +16,9 @@ import {
 } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 
+/*
+ * Component for the Main App Page (GangView page)
+ */
 export default class GangView extends React.Component {
   constructor(props) {
     super(props);
@@ -24,9 +27,15 @@ export default class GangView extends React.Component {
     };
   }
 
+  /*
+   * Event handler for cycling through the list of available gangs
+   */
   incrementCurrentIndex = () => {
     this.setState({ currentIndex: (this.state.currentIndex + 1) % 3 });
   };
+  /*
+   * Hardcoded List of gangs with their name, bio, and banner image file name
+   */
   gangs = [
     {
       name: "Gaming Gang",
@@ -46,6 +55,9 @@ export default class GangView extends React.Component {
     }
   ];
 
+  /*
+   * Color theme for the like/dislike button
+   */
   buttonTheme = createMuiTheme({
     palette: {
       primary: {

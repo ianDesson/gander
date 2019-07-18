@@ -11,6 +11,12 @@ import { ThemeProvider } from '@material-ui/styles';
 
 import ArrowBack from '@material-ui/icons/ArrowBack';
 
+/*
+ * NavBar used in EditInfo Page and CreateGroup page
+ * Requires backNavigation and title prop to display the 
+ * current page and what URL to go back to when the back button is pressed
+ */
+
 const EditingNavBar = (props) => {
   const NavBarTheme = createMuiTheme({
     palette: {
