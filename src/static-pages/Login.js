@@ -8,7 +8,6 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
@@ -32,10 +31,6 @@ const paper = {
 
 const form = {
   marginTop: theme.spacing(1),
-}
-
-const submit = {
-  margin: theme.spacing(3, 0, 2),
 }
 
 export default class Login extends React.Component {
@@ -81,7 +76,8 @@ render(){
             fullWidth
             variant="contained"
             color="primary"
-            style={submit}
+            style={{margin: theme.spacing(3, 0, 2), color: '#FCFFFC', backgroundColor: '#56D822'}}
+            href="/gangview"
           >
             Sign In
           </Button>

@@ -17,7 +17,7 @@ const theme = createMuiTheme({
 });
 
 const logoStyle = {
-  width: "75%",
+  width: "20rem",
   height: "auto",
   display: "block",
   marginLeft: "auto",
@@ -25,14 +25,11 @@ const logoStyle = {
   marginTop: "50px"
 };
 
-const buttons = {
-  marginTop: "10px"
-};
 export default class SignIn extends React.Component {
   render() {
     return (
-      <>
-        <img src={logoWithText} style={logoStyle} alt="Gander" />
+      <div style={{ width: '75%', margin: '0 auto'}}>
+        <img src={logoWithText} style={logoStyle} alt="Gander"/>
         <ThemeProvider theme={theme}>
           <Link to="/signup" style={{textDecoration: 'none'}}>
             <Button
@@ -45,7 +42,7 @@ export default class SignIn extends React.Component {
             </Button>
           </Link>
           <Button
-            style={buttons}
+            style={{marginTop: '1rem', backgroundColor: '#3C5A99'}}
             variant="contained"
             color="secondary"
             fullWidth="true"
@@ -55,7 +52,7 @@ export default class SignIn extends React.Component {
           </Button>
 
           <Button
-            style={buttons}
+            style={{marginTop: '1rem', backgroundColor: '#B23121'}}
             variant="contained"
             color="secondary"
             fullWidth="true"
@@ -65,7 +62,7 @@ export default class SignIn extends React.Component {
           </Button>
           <Link to="/login" style={{textDecoration: 'none'}}>
             <Button
-              style={buttons}
+              style={{marginTop: '1rem'}}
               variant="contained"
               color="primary"
               fullWidth="true"
@@ -75,7 +72,7 @@ export default class SignIn extends React.Component {
             </Button>
           </Link>
         </ThemeProvider>
-      </>
+      </div>
     );
   }
 }
