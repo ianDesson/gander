@@ -36,9 +36,11 @@ export default class Profile extends React.Component {
               <IconButton style={{color: '#2d3a3a', backgroundColor: '#d9d9d9'}}>
                 <Settings />
               </IconButton>
+              <Link to="/AddPictures">
               <IconButton style={{color: '#2d3a3a', backgroundColor: '#d9d9d9'}}>
                 <PhotoLibrary />
               </IconButton>
+              </Link>
               <Link to="/EditInfo">
                 <IconButton style={{color: '#2d3a3a', backgroundColor: '#d9d9d9'}}>
                   <Edit />

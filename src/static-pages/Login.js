@@ -11,6 +11,8 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
+import { Redirect } from 'react-router-dom'
+
 
 const theme = createMuiTheme({
   palette: {
@@ -33,9 +35,11 @@ const form = {
   marginTop: theme.spacing(1)
 };
 
+
 export default class Login extends React.Component {
 
-  
+
+
   render() {
     return (
       <Container component="main" maxWidth="xs">
@@ -45,7 +49,7 @@ export default class Login extends React.Component {
             Sign In
           </Typography>
           <ThemeProvider theme={theme}>
-            <form style={form}>
+            <form style={form} action="/gangview" method="get">
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -82,7 +86,7 @@ export default class Login extends React.Component {
                   color: "#FCFFFC",
                   backgroundColor: "#56D822"
                 }}
-                href="/gangview"
+                //href="/gangview"
               >
                 Sign In
               </Button>
@@ -93,7 +97,7 @@ export default class Login extends React.Component {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

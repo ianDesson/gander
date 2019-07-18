@@ -64,7 +64,7 @@ export default function SignUp() {
           Sign Up
         </Typography>
         <ThemeProvider theme={theme}>
-        <form className={classes.form}>
+        <form className={classes.form} action="/gangview" method="get">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -130,7 +130,6 @@ export default function SignUp() {
             fullWidth
             variant="contained"
             style={{ backgroundColor: '#56D822', color: '#FCFFFC'}}
-            href="/gangview"
             className={classes.submit}
           >
             Sign Up
