@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
 import Grid from "@material-ui/core/Grid";
@@ -13,7 +14,7 @@ import {
   ListItemText,
   Divider
 } from "@material-ui/core";
-import { deepOrange } from '@material-ui/core/colors';
+import { deepOrange } from "@material-ui/core/colors";
 
 /*
  * Component for the messages page
@@ -29,11 +30,13 @@ export default class Messages extends React.Component {
           justify="flex-start"
           style={{ margin: "0.5rem auto", width: "95%" }}
         >
-          <IconButton>
-            <Avatar style= {{ backgroundColor: '#80ff80' }}>
-              <Add />
-            </Avatar>
-          </IconButton>
+          <Link to="/creategroup">
+            <IconButton>
+              <Avatar style={{ backgroundColor: "#80ff80" }}>
+                <Add />
+              </Avatar>
+            </IconButton>
+          </Link>
           <hr style={{ margin: "0 1rem 0 1rem" }} />
           <IconButton size="medium">
             <Avatar style={{ backgroundColor: "#ff1a1a" }}>GA</Avatar>

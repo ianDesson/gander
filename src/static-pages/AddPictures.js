@@ -2,8 +2,6 @@ import React from "react";
 import {
   Grid,
   IconButton,
-  Typography,
-  TextField,
   Card,
   Fab
 } from "@material-ui/core";

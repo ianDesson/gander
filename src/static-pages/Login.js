@@ -11,7 +11,6 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
-import { Redirect } from 'react-router-dom'
 
 
 const theme = createMuiTheme({
