@@ -58,7 +58,7 @@ export default class SignIn extends React.Component {
             fullWidth="true"
             size="large"
           >
-            SIGN UP WITH FACEBOOK
+            SIGN IN WITH FACEBOOK
           </Button>
           </Link>
           <Link to="/Profile" style={{textDecoration: 'none'}}>
@@ -69,7 +69,7 @@ export default class SignIn extends React.Component {
             fullWidth="true"
             size="large"
           >
-            SIGN UP WITH GOOGLE
+            SIGN IN WITH GOOGLE
           </Button>
           </Link>
 

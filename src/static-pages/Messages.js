@@ -52,26 +52,26 @@ export default class Messages extends React.Component {
         <List>
           <ListItem button>
             <ListItemAvatar>
-              <Avatar style={{ backgroundColor: "#ff1a1a" }}>GA</Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Gaming Gang" secondary="76 members" />
-          </ListItem>
-          <Divider variant="inset" component="li" />
-          <ListItem button>
-            <ListItemAvatar>
               <Avatar style={{ backgroundColor: "#4d4dff" }}>EN</Avatar>
             </ListItemAvatar>
-            <ListItemText
-              primary="Entrepeneurship Gang"
-              secondary="23 members"
-            />
+            <ListItemText primary="Entrepeneurship Gang" secondary="76 members" />
           </ListItem>
           <Divider variant="inset" component="li" />
           <ListItem button>
             <ListItemAvatar>
               <Avatar style={{ backgroundColor: deepOrange[500] }}>EG</Avatar>
             </ListItemAvatar>
-            <ListItemText primary="Engineering Gang" secondary="32 members" />
+            <ListItemText
+              primary="Engineering Gang"
+              secondary="23 members"
+            />
+          </ListItem>
+          <Divider variant="inset" component="li" />
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar style={{ backgroundColor: '#ff1a1a' }}>GA</Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="Gaming Gang" secondary="32 members" />
           </ListItem>
         </List>
       </>

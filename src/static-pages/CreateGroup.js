@@ -156,7 +156,7 @@ export default class CreateGroup extends React.Component {
           <Fab
             variant="extended"
             style={{ color: "#FCFFFC", backgroundColor: "#56D822" }}
-
+            href="/messages"
           >
             <Save />
             Save
